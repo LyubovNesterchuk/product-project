@@ -17,41 +17,27 @@
     <title>Business_promotion</title>
   </head>
   <body>
-    <!-- #region Header -->
-    <header class="header">
-      <div class="container header-container">
-                  <a class="logo" href="./index.html">
-            <img src="./images/logo.svg" alt="Logo" width="40" height="36" />
-            Product
-          </a>
-                <div class="header-nav-btn-container">
-                  <nav class="header-nav">
-                            <ul class="header-nav-list">
-                              <li class="header-list-item">
-                                <a class="header-item-link" href="#product">Product</a>
-                              </li>
-                              <li class="header-list-item">
-                                <a class="header-item-link" href="./pricing.html">Pricing</a>
-                              </li>
-                              <li class="header-list-item">
-                                <a class="header-item-link" href="./customers.html">Customers</a>
-                              </li>
-                              <li class="header-list-item">
-                                <a class="header-item-link" href="">Resources</a>
-                              </li>
-                            </ul>
-                          </nav>
-                          <ul class="header-btn-list">
-                            <li class="header-btn-list-item">
-                              <button class="header-btn-in" type="button">Sign In</button>
-                            </li>
-                            <li class="header-btn-list-item">
-                              <button class="header-btn-up" type="button">Sign Up</button>
-                            </li>
-                          </ul>
-                </div>
-      </div>
-    </header>
+     <!-- #region Header -->
+ <header class="header">
+    <div class="container header-container">
+      <a href="./index.html" class="logo header-logo">
+        <img src="./images/logo.svg" alt="Logo" width="40" height="36" class="logo-img">
+        Product
+      </a>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-list-item"><a class="header-item-link current" href="./index.html">Product</a></li>
+          <li class="header-list-item"><a class="header-item-link" href="./pricing.html">Pricing</a></li>
+          <li class="header-list-item"><a class="header-item-link" href="./customers.html">Customers</a></li>
+          <li class="header-list-item"><a class="header-item-link" href="">Resources</a></li>
+        </ul>
+      </nav>
+      <ul class="header-btn-list">
+        <li class="header-btn-item"><button class="header-btn" type="button">Sign In</button></li>
+        <li class="header-btn-item"><button class="header-btn" type="button">Sign Up</button></li>
+      </ul>
+    </div>
+  </header>
     <!-- #endregion Header -->
     <main>
       <!-- #region Hero section -->
@@ -74,7 +60,7 @@
               </li>
             </ul>
           </div>
-          <img
+          <img class="hero-image"
             src="./images/hero-img.svg"
             alt="people"
             width="610"
@@ -393,7 +379,7 @@
       </section>
       <!-- #endregion Strategies -->
 
-      <!-- #region Price white-->
+      <!-- #region Price -->
       <section class="price-section">
         <div class="container">
           <h2 class="price-title">Price table</h2>
@@ -424,59 +410,6 @@
                 <li clas="price-sublist-item-white">5+ operators</li>
                 <li clas="price-sublist-item-white">Notifications</li>
                 <li clas="price-sublist-item-white">Landing pages</li>
-              </ul>
-              <button class="price-btn-white" type="button">Order now</button>
-            </li>
-            <li class="price-list-item">
-              <h3 class="price-subtitle">Premium</h3>
-              <p class="price-list-text">Brief price description</p>
-              <h4 class="price-per-month">
-                <span class="price-sum">10</span
-                ><span class="dollar-sign">$</span> Per / month
-              </h4>
-              <ul class="price-sublist">
-                <li clas="price-sublist-item">10+ operators</li>
-                <li clas="price-sublist-item">Notifications</li>
-                <li clas="price-sublist-item">Landing pages</li>
-              </ul>
-              <button class="price-btn" type="button">Order now</button>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- #endregion Price Table -->
-
-       <!-- #region Price -->
-      <section class="price-section">
-        <div class="container">
-          <h2 class="price-title">Price table</h2>
-          <p class="price-text">We offer competitive price</p>
-          <ul class="price-list">
-            <li class="price-list-item">
-              <h3 class="price-subtitle">Free</h3>
-              <p class="price-list-text">Brief price description</p>
-              <h4 class="price-per-month">
-                <span class="price-sum">0</span
-                ><span class="dollar-sign">$</span> Per / month
-              </h4>
-              <ul class="price-sublist">
-                <li clas="price-sublist-item">Only 2 operators</li>
-                <li clas="price-sublist-item">Notifications</li>
-                <li clas="price-sublist-item">Landing pages</li>
-              </ul>
-              <button class="price-btn" type="button">Order now</button>
-            </li>
-            <li class="price-list-item">
-              <h3 class="price-subtitle-white">Standard</h3>
-              <p class="price-list-text-white">Brief price description</p>
-              <h4 class="price-per-month-white">
-                <span class="price-sum-white">5</span
-                ><span class="dollar-sign-white">$</span> Per / month
-              </h4>
-              <ul class="price-sublist">
-                <li clas="price-sublist-item">5+ operators</li>
-                <li clas="price-sublist-item">Notifications</li>
-                <li clas="price-sublist-item">Landing pages</li>
               </ul>
               <button class="price-btn-white" type="button">Order now</button>
             </li>
@@ -593,7 +526,7 @@
       <div class="container">
         <div class="footer-container">
         <div class="logo-social-link">
-          <a class="logo" href="./index.html"
+          <a class="logo footer-logo" href="./index.html"
             ><img src="./images/logo.svg" alt="" width="40" height="36" />Product</a
           >
           <ul class="footer-icon-list">

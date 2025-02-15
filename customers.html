@@ -7,45 +7,33 @@
       rel="stylesheet"
       href="node_modules/modern-normalize/modern-normalize.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/customers.css" />
     <title>Business promotion customers</title>
   </head>
   <body>
+
+    
     <!-- #region Header -->
-  <header class="header-customers">
-      <div class="container header-container">
-                  <a class="logo" href="./index.html">
-            <img src="./images/logo.svg" alt="Logo" width="40" height="36" />
-            Product
-          </a>
-                <div class="header-nav-btn-container">
-                  <nav class="header-nav">
-                            <ul class="header-nav-list">
-                              <li class="header-list-item">
-                                <a class="header-item-link" href="#product">Product</a>
-                              </li>
-                              <li class="header-list-item">
-                                <a class="header-item-link" href="./pricing.html">Pricing</a>
-                              </li>
-                              <li class="header-list-item">
-                                <a class="header-item-link" href="./customers.html">Customers</a>
-                              </li>
-                              <li class="header-list-item">
-                                <a class="header-item-link" href="">Resources</a>
-                              </li>
-                            </ul>
-                          </nav>
-                          <ul class="header-btn-list">
-                            <li class="header-btn-list-item">
-                              <button class="header-btn-in" type="button">Sign In</button>
-                            </li>
-                            <li class="header-btn-list-item">
-                              <button class="header-btn-up" type="button">Sign Up</button>
-                            </li>
-                          </ul>
-                </div>
-      </div>
-    </header>
+  <header class="header">
+    <div class="container header-container">
+      <a href="./index.html" class="logo header-logo">
+        <img src="./images/logo.svg" alt="Logo" width="40" height="36" class="logo-img">
+        Product
+      </a>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-list-item"><a class="header-item-link" href="./index.html">Product</a></li>
+          <li class="header-list-item"><a class="header-item-link" href="./pricing.html">Pricing</a></li>
+          <li class="header-list-item"><a class="header-item-link current" href="./customers.html">Customers</a></li>
+          <li class="header-list-item"><a class="header-item-link" href="">Resources</a></li>
+        </ul>
+      </nav>
+      <ul class="header-btn-list">
+        <li class="header-btn-item"><button class="header-btn" type="button">Sign In</button></li>
+        <li class="header-btn-item"><button class="header-btn" type="button">Sign Up</button></li>
+      </ul>
+    </div>
+  </header>
     <!-- #endregion Header -->
     <main>
       <!-- #region Our Clients -->
@@ -81,61 +69,46 @@
       </section>
       <!-- #endregion Our Clients -->
 
-      <!-- #region Why Choose Product? -->
-      <section>
+      <!-- #region Why Choose -->
+      <section class="why-choose-section">
         <div class="container">
-          <h2>Why Choose Product?</h2>
-          <ul>
-            <li>
-              <img
+          <h2 class="why-choose-title">Why choose product?</h2>
+          <ul class="why-choose-list">
+            <li class="why-choose-list-item">
+              <img class="why-choose-image"
                 src="./images/icon_1/icon-bd.svg"
                 alt="icon"
                 width="50"
                 height="50"
               />
-              <h3>Special Business</h3>
-              <p>
+              <h3 class="why-choose-subtitle">Special Business</h3>
+              <p class="why-choose-description">
                 Product helps you see how many more days you need to work to
-                reach your financial goal for the month and year. Product helps
-                you see how many more days you need to work to reach your
-                financial goal for the month and year. Product helps you see how
-                many more days you need to work to reach your financial goal for
-                the month and year.
-              </p>
+                reach your financial goal for the month and year.</p>
             </li>
-            <li>
-              <img
+            <li class="why-choose-list-item">
+              <img class="why-choose-image"
                 src="./images/icon_1/icon-2.svg"
                 alt="icon"
                 width="50"
                 height="50"
               />
-              <h3>Instant Result</h3>
-              <p>
+              <h3 class="why-choose-subtitle">Instant Result</h3>
+              <p class="why-choose-description">
                 Product helps you see how many more days you need to work to
-                reach your financial goal for the month and year. Product helps
-                you see how many more days you need to work to reach your
-                financial goal for the month and year. Product helps you see how
-                many more days you need to work to reach your financial goal for
-                the month and year.
-              </p>
+                reach your financial goal for the month and year.</p>
             </li>
-            <li>
-              <img
+            <li class="why-choose-list-item">
+              <img class="why-choose-image"
                 src="./images/icon_1/icon-5.png"
                 alt="icon"
                 width="50"
                 height="50"
               />
-              <h3>Fastest way to organize</h3>
-              <p>
+              <h3 class="why-choose-subtitle">Fastest way to organize</h3>
+              <p class="why-choose-description">
                 Product helps you see how many more days you need to work to
-                reach your financial goal for the month and year. Product helps
-                you see how many more days you need to work to reach your
-                financial goal for the month and year. Product helps you see how
-                many more days you need to work to reach your financial goal for
-                the month and year.
-              </p>
+                reach your financial goal for the month and year. </p>
             </li>
           </ul>
         </div>
@@ -143,91 +116,96 @@
       <!-- #endregion Why Choose Product? -->
 
       <!-- #region How Product Work? -->
-      <section>
+      <section class="how-work-section">
         <div class="container">
-          <h2>How Product Work?</h2>
-          <ul>
-            <li>
-              <img
+          <h2 class="how-work-title">How Product Work?</h2>
+          <ul class="how-work-list">
+            <li class="how-work-list-item">
+              <img class="how-work-image"
                 src="./images/mac/mac1.png"
                 alt="mac1"
                 width="500"
                 height="280"
               />
-              <p>step 1</p>
-              <h3>Apply for a product</h3>
-              <p>
-                Completing our easy step-by-step application form gives you
-                access to multiple business with multiple products. We analyse
-                your business through our proprietary credit analysis technology
-              </p>
+              <div class="how-work-step-container">
+                <p class="how-work-step">step 1</p>
+                <h3 class="how-work-subtitle">Apply for a product</h3>
+                <p class="how-work-description">
+                  Completing our easy step-by-step application form gives you
+                  access to multiple business with multiple products. We analyse
+                  your business through our proprietary credit analysis technology
+                </p>
+              </div>
             </li>
-            <li>
-              <img
+            <li class="how-work-list-item">
+                 <div class="how-work-step-container">
+                <p class="how-work-step">step 2</p>
+                <h3 class="how-work-subtitle">Pay fully refundable</h3>
+                <p class="how-work-description">
+                  Product will contactting you instantly to receive payment of the
+                  Application Fee. if no offer of product is available, your fee
+                  will be fully refunded.
+                </p>
+              </div>
+               <img class="how-work-image"
                 src="./images/mac/mac2.png"
                 alt="mac2"
                 width="500"
                 height="280"
               />
-              <p>step 2</p>
-              <h3>Pay fully refundable</h3>
-              <p>
-                Product will contactting you instantly to receive payment of the
-                Application Fee. if no offer of product is available, your fee
-                will be fully refunded.
-              </p>
-            </li>
-            <li>
-              <img
+             </li>
+            <li class="how-work-list-item">
+              <img class="how-work-image"
                 src="./images/mac/mac3.png"
                 alt="mac3"
                 width="500"
                 height="280"
               />
-              <p>step 3</p>
-              <h3>Completion</h3>
-              <p>
-                Product will continue to liase between borrower and manager to
-                procees and complete a quick and efficient settlement
-              </p>
+              <div how-work-step-container>
+                <p class="how-work-step">step 3</p>
+                <h3 class="how-work-subtitle">Completion</h3>
+                <p class="how-work-description">
+                  Product will continue to liase between borrower and manager to
+                  procees and complete a quick and efficient settlement
+                </p>
+              </div>
             </li>
           </ul>
-          <button type="button">Get in touch with us</button>
+          <button class="how-work-button" type="button">Get in touch with us</button>
         </div>
       </section>
       <!-- #endregion How Product Work? -->
 
-      <!-- #region Join thousand of other who have
-already received offers-->
-      <section>
+      <!-- #region received offers-->
+      <section class="offers-section">
         <div class="container">
-          <h2>Join thousand of other who have already received offers</h2>
-          <ul>
-            <li>
-              <img
+          <h2 class="offers-title">Join thousand of other who have already received offers</h2>
+          <ul class="offers-list">
+            <li class="offers-list-item">
+              <img class="offers-images"
                 src="./images/placeholder_red.png"
                 alt="placeholder_red"
                 width="150"
                 height="150"
               />
-              <h3>Business</h3>
-              <p>Cash Flow</p>
-              <p>Asset Backed</p>
-              <p>Receivables Finance</p>
-              <a href="">Find the best business product</a>
+              <h3 class="offers-subtitle">Business</h3>
+              <p class="offers-description">Cash Flow</p>
+              <p class="offers-description">Asset Backed</p>
+              <p class="offers-description">Receivables Finance</p>
+              <a class="offers-link" href="">Find the best business product</a>
             </li>
-            <li>
-              <img
+            <li class="offers-list-item">
+              <img class="offers-images"
                 src="./images/placeholder_blue.png"
                 alt="placeholder_blue"
                 width="150"
                 height="150"
               />
-              <h3>Enterprise</h3>
-              <p>Site Acquisition</p>
-              <p>Bridge</p>
-              <p>Development Financing</p>
-              <a href="">Find the best business product</a>
+              <h3 class="offers-subtitle">Enterprise</h3>
+              <p class="offers-description">Site Acquisition</p>
+              <p class="offers-description">Bridge</p>
+              <p class="offers-description">Development Financing</p>
+              <a class="offers-link" href="">Find the best business product</a>
             </li>
           </ul>
         </div>
