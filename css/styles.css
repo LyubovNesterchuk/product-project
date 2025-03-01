@@ -80,18 +80,45 @@ button {
 
 .header-list-item {
   color: #22343d;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   line-height: 1.75;
 }
 
 .header-item-link {
+  position: relative;
   display: block;
   padding: 26px 0;
   color: #22343d;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   line-height: 1.75;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-item-link:hover,
+.header-item-link:focus,
+.header-item-link.current {
+  color: #02897a;
+}
+
+.header-item-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #02897a;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-item-link:hover::after,
+.header-item-link:focus::after,
+.header-item-link.current::after {
+  opacity: 1;
 }
 
 .header-btn-list {
@@ -103,20 +130,19 @@ button {
 .header-btn-list-item {
 }
 .header-btn {
-  border: 1px solid #bcd0e5;
   border-radius: 4px;
   min-width: 105px;
   height: 42px;
   font-family: inherit;
   font-weight: 600;
   text-align: center;
-  color: #173a56;
-  background-color: transparent;
+  background-color: #02897a;
+  color: #fff;
+  border-color: transparent;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current {
-  font-weight: 600;
-}
 .header-btn-list {
   display: flex;
   gap: 21px;
@@ -124,9 +150,9 @@ button {
 
 .header-btn:hover,
 .header-btn:focus {
-  background-color: #02897a;
-  color: #fff;
-  border-color: transparent;
+  color: #173a56;
+  border: 1px solid #bcd0e5;
+  background-color: transparent;
 }
 /* #endregion Header */
 
@@ -162,7 +188,7 @@ button {
 
 .hero-button-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .hero-list-item {
@@ -177,6 +203,16 @@ button {
   border-radius: 4px;
   min-width: 178px;
   height: 53px;
+  margin-right: 30px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn-start:hover,
+.hero-btn-start:focus {
+  color: #02897a;
+  background-color: transparent;
+  border: 1px solid #bcd0e5;
 }
 .hero-btn-watch {
   font-weight: 600;
@@ -188,6 +224,16 @@ button {
   background-color: #fff;
   min-width: 178px;
   height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-triangle {
+  fill: #02897a;
+  margin-right: 9px;
 }
 /* #endregion Hero section  */
 
@@ -223,9 +269,36 @@ button {
   flex-basis: calc((100% - 90px) / 4);
 }
 
-.product-icon {
+.product-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 19px;
+  width: 54px;
+  height: 54px;
   margin-bottom: 18px;
+  fill: #fff;
 }
+
+.product-list-item:nth-child(1) .product-box {
+  background-color: #02897a;
+}
+
+.product-list-item:nth-child(2) .product-box {
+  background-color: #4d8dff;
+}
+
+.product-list-item:nth-child(3) .product-box {
+  background-color: #740a76;
+}
+
+.product-list-item:nth-child(4) .product-box {
+  background-color: #f03e3d;
+}
+
+/* .product-icon {
+  margin-bottom: 18px;
+} */
 
 .product-item-title {
   font-weight: 600;
@@ -254,6 +327,15 @@ button {
   height: 53px;
   margin-left: auto;
   margin-right: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-btn:hover,
+.product-btn:focus {
+  color: #02897a;
+  background-color: transparent;
+  border: 1px solid #bcd0e5;
 }
 /* #endregion Product */
 
@@ -352,17 +434,43 @@ button {
 }
 
 .support-list-item {
+  /* display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 25px; */
+}
+
+.support-item-text {
   display: flex;
   align-items: center;
   gap: 30px;
   padding-bottom: 25px;
-}
-
-.support-item-text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.625;
+  line-height: 1.62;
   color: #22343d;
+}
+.support-item-text::before {
+  content: "";
+  display: block;
+  border: 3px solid #fff;
+  border-radius: 14px;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/tick.svg);
+  flex-shrink: 0;
+}
+
+.support-list-item:nth-child(1) .support-item-text::before {
+  background-color: #f90;
+}
+.support-list-item:nth-child(2) .support-item-text::before {
+  background-color: #f03e3d;
+}
+.support-list-item:nth-child(3) .support-item-text::before {
+  background-color: #4d8dff;
 }
 
 /* #endregion Support */
@@ -471,12 +579,19 @@ button {
   margin-bottom: 50px;
 }
 
-.process-desc {
+.process-desc-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+.process-item-text-wrapper {
+  width: 281px;
+  min-height: 50px;
+  padding-top: 14px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px 0 rgba(23, 58, 86, 0.15);
+}
 .process-item-text {
   font-weight: 500;
   font-size: 16px;
@@ -496,6 +611,16 @@ button {
   height: 53px;
   margin-left: auto;
   margin-right: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-btn:hover,
+.process-btn:focus {
+  color: #02897a;
+  background-color: transparent;
+  border: 1px solid #bcd0e5;
 }
 
 /* #endregion Process */
@@ -690,6 +815,16 @@ button {
   margin-right: auto;
   color: #fff;
   background-color: #02897a;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.price-btn:hover,
+.price-btn:focus {
+  color: #02897a;
+  background-color: transparent;
+  border: 1px solid #bcd0e5;
 }
 
 /* Price white */
@@ -788,6 +923,16 @@ button {
   margin-right: auto;
   color: #02897a;
   background-color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.price-btn-white:hover,
+.price-btn-white:focus {
+  color: #fff;
+  background-color: #bcd0e5;
+  border: 1px solid #bcd0e5;
 }
 
 /* #endregion Price */
@@ -919,6 +1064,16 @@ button {
   width: 150px;
   height: 50px;
   background-color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.join-btn:hover,
+.join-btn:focus {
+  color: #22343d;
+  background-color: #bcd0e5;
+  border: 1px solid #bcd0e5;
 }
 
 .join-image {
@@ -979,11 +1134,35 @@ button {
 .footer-icon-item {
 }
 
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid #edfffc;
+  background-color: #edfffc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon {
+  stroke: #02897a;
+  fill: transparent;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: transparent;
+  border: 1px solid #bcd0e5;
+}
+
 .footer-text {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.5;
   color: #22343d;
+  margin-bottom: 30px;
 }
 .footer-list {
 }
@@ -994,8 +1173,45 @@ button {
   font-size: 16px;
   line-height: 2.1875;
   color: #22343d;
+  transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-enter-text {
+
+.footer-item-link:hover,
+.footer-item-link:focus {
+  color: #02897a;
+}
+.form-label {
+  position: relative;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.form-input {
+  padding-left: 42px;
+  width: 325px;
+  height: 48px;
+  background-color: transparent;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.19;
+  color: #22343d;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+  border-color: #02897a;
+}
+
+.phone-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: #02897a;
+}
+
+.form-input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.75;
@@ -1007,11 +1223,22 @@ button {
   text-align: center;
   color: #fff;
   background-color: #02897a;
-  width: 131px;
+  min-width: 131px;
   height: 39px;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.footer-button:hover,
+.footer-button:focus {
+  color: #02897a;
+  background-color: transparent;
+  border: 1px solid #bcd0e5;
+}
+
 .footer-right-text {
   font-weight: 400;
   font-size: 16px;

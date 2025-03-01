@@ -29,7 +29,7 @@
           <li class="header-list-item"><a class="header-item-link current" href="./index.html">Product</a></li>
           <li class="header-list-item"><a class="header-item-link" href="./pricing.html">Pricing</a></li>
           <li class="header-list-item"><a class="header-item-link" href="./customers.html">Customers</a></li>
-          <li class="header-list-item"><a class="header-item-link" href="">Resources</a></li>
+          <li class="header-list-item"><a class="header-item-link" href="#">Resources</a></li>
         </ul>
       </nav>
       <ul class="header-btn-list">
@@ -54,9 +54,9 @@
                 <button class="hero-btn-start" type="button">Get started</button>
               </li>
               <li class="hero-list-item">
-                <button class="hero-btn-watch" type="button">
-                  Watch the Video
-                </button>
+                <button class="hero-btn-watch" type="button"> <svg class="icon-triangle" width="20" height="18">
+                    <use href="./images/icons.svg#icon-Triangle"></use>
+                  </svg> Watch the video</button>
               </li>
             </ul>
           </div>
@@ -79,48 +79,68 @@
           </h2>
           <ul class="product-list">
             <li class="product-list-item">
-              <img  class="product-icon"
+              <!-- <img  class="product-icon"
                 src="./images/icon_1/icon-bd.svg"
                 alt="icon"
                 width="54"
                 height="54"
-              />
+              /> -->
+              <div class="product-box">
+                <svg class="product-box-icon" width="11" height="18">
+                  <use href="./images/icons.svg#icon-arrow"></use>
+                </svg>
+              </div>
               <h3 class="product-item-title">First click tests</h3>
               <p class="product-item-text">
                 While most people enjoy casino gambling,
               </p>
             </li>
             <li class="product-list-item">
-              <img class="product-icon"
+              <!-- <img class="product-icon"
                 src="./images/icon_1/icon-2.svg"
                 alt="icon"
                 width="54"
                 height="54"
-              />
+              /> -->
+              <div class="product-box">
+                <svg class="product-box-icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-wave"></use>
+                </svg>
+              </div>
               <h3 class="product-item-title">Design surveys</h3>
               <p class="product-item-text">
                 Sports betting, lottery and bingo playing for the fun
               </p>
             </li>
             <li class="product-list-item">
-              <img class="product-icon"
+              <!-- <img class="product-icon"
                 src="./images/icon_1/icon-3.svg"
                 alt="icon"
                 width="54"
                 height="54"
-              />
+              /> -->
+              <div class="product-box">
+                <svg class="product-box-icon" width="16" height="18">
+                  <use href="./images/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
               <h3 class="product-item-title">Preference tests</h3>
               <p class="product-item-text">
                 The Myspace page defines the individual.
               </p>
             </li>
             <li class="product-list-item">
-              <img class="product-icon"
+              <!-- <img class="product-icon"
                 src="./images/icon_1/icon-4.svg"
                 alt="icon"
                 width="54"
                 height="54"
-              />
+              /> -->
+               <div class="product-box">
+                <svg class="product-box-icon" width="14" height="18">
+                  <use href="./images/icons.svg#icon-sand-clock"></use>
+                </svg>
+              </div>
               <h3 class="product-item-title">Five second tests</h3>
               <p class="product-item-text">
                 Personal choices and the overall personality of the person.
@@ -187,35 +207,35 @@
             </p>
             <ul class="support-list">
               <li class="support-list-item">
-                <img
+                <!-- <img
                   src="./images/flag/icon-or.svg"
                   alt="icon-orange"
                   width="35"
                   height="35"
-                />
+                /> -->
                 <p class="support-item-text">
                   Never worry about overpaying for your energy again.
                 </p>
               </li>
               <li class="support-list-item">
-                <img
+                <!-- <img
                   src="./images/flag/icon-bl.svg"
                   alt="icon-blue"
                   width="35"
                   height="35"
-                />
+                /> -->
                 <p class="support-item-text">
                   We will only switch you to energy companies that we trust and will
                   treat you right
                 </p>
               </li>
               <li class="support-list-item">
-                <img
+                <!-- <img
                   src="./images/flag/icon-red.svg"
                   alt="icon-red"
                   width="35"
                   height="35"
-                />
+                /> -->
                 <p class="support-item-text">
                   We track the markets daily and know where the savings are.
                 </p>
@@ -274,19 +294,22 @@
           </p>
           <ul class="process-list">
             <li class="process-list-item">
-              <div class="process-desc">
+              <div class="process-desc-container">
                 <img
                   src="./images/avatar/avatar.png"
                   alt="avatar1"
                   width="98"
                   height="98"
                 />
-                <p class="process-item-text">I can take care of your pitch</p>
+                <div class="process-item-text-wrapper">
+                  <p class="process-item-text">I can take care of your pitch</p>
+                </div>
               </div>
             </li>
             <li class="process-list-item">
-              <div class="process-desc">
-                 <p class="process-item-text">I can take care of your pitch</p>
+              <div class="process-desc-container">
+                <div class="process-item-text-wrapper">
+                 <p class="process-item-text">I can take care of your pitch</p></div>
                 <img
                   src="./images/avatar/avatar-g.png"
                   alt="avatar"
@@ -296,8 +319,9 @@
               </div>
             </li>
             <li class="process-list-item">
-              <div class="process-desc">
-               <p class="process-item-text">I can prototype your app</p> 
+              <div class="process-desc-container">
+                <div class="process-item-text-wrapper">
+               <p class="process-item-text">I can prototype your app</p></div>
                <img
                   src="./images/avatar/avatar-b.png"
                   alt="avatar2"
@@ -307,14 +331,15 @@
                   </div>
             </li>
             <li class="process-list-item">
-              <div class="process-desc">
+              <div class="process-desc-container">
                 <img
                   src="./images/avatar/avatar-m.png"
                   alt="avatar3"
                   width="98"
                   height="98"
                 />
-                <p class="process-item-text">I can help marketing strategy</p>
+                <div class="process-item-text-wrapper">
+                <p class="process-item-text">I can help marketing strategy</p></div>
               </div>
             </li>
           </ul>
@@ -531,28 +556,24 @@
           >
           <ul class="footer-icon-list">
             <li class="footer-icon-item">
-              <img
-                src="./images/item/instagram.svg"
-                alt="instagram"
-                width="40"
-                height="40"
-              />
+              <a class="social-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg></a>
             </li class="footer-icon-item">
-            <li>
-              <img
-                src="./images/item/item-2.png"
-                alt="facebook"
-                width="40"
-                height="40"
-              />
+            <li class="footer-icon-item">
+              <a class="social-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
             </li>
             <li class="footer-icon-item">
-              <img
-                src="./images/item/item-3.png"
-                alt="tweeter"
-                width="40"
-                height="40"
-              />
+              <a class="social-link" href="#">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
             </li>
           </ul>
         </div>
@@ -575,8 +596,16 @@
         </div>
         <div class="sign-up">
         <p class="footer-text">Knowing you're always on the best energy deal.</p>
-        <img src="./images/phone.png" alt="Smartphone icon"> <p class="footer-enter-text">Enter your phone number</p>
-        <button class="footer-button" type="button">Sign up Now</button>
+     
+        <form class="footer-form">
+        
+            <label class="form-label" for="user-tel">
+            <input class="form-input" id="user-tel" type="tel" name="user-tel" placeholder="Enter your phone number">
+            <svg class="phone-icon" width="16" height="24">
+           <use href="./images/icons.svg#icon-mobile-screen"></use>
+         </svg>
+         </label>
+        <button class="footer-button" type="submit">Sign up Now</button></form>
               </div>
             </div>
       <p class="footer-right-text">Made with love by figmaland all right reserved</p>

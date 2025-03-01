@@ -81,18 +81,45 @@ button {
 
 .header-list-item {
   color: #22343d;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   line-height: 1.75;
 }
 
 .header-item-link {
+  position: relative;
   display: block;
   padding: 26px 0;
   color: #22343d;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   line-height: 1.75;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-item-link:hover,
+.header-item-link:focus,
+.header-item-link.current {
+  color: #02897a;
+}
+
+.header-item-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #02897a;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-item-link:hover::after,
+.header-item-link:focus::after,
+.header-item-link.current::after {
+  opacity: 1;
 }
 
 .header-btn-list {
@@ -104,20 +131,19 @@ button {
 .header-btn-list-item {
 }
 .header-btn {
-  border: 1px solid #bcd0e5;
   border-radius: 4px;
   min-width: 105px;
   height: 42px;
   font-family: inherit;
   font-weight: 600;
   text-align: center;
-  color: #173a56;
-  background-color: transparent;
+  background-color: #02897a;
+  color: #fff;
+  border-color: transparent;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current {
-  font-weight: 600;
-}
 .header-btn-list {
   display: flex;
   gap: 21px;
@@ -125,9 +151,9 @@ button {
 
 .header-btn:hover,
 .header-btn:focus {
-  background-color: #02897a;
-  color: #fff;
-  border-color: transparent;
+  color: #173a56;
+  border: 1px solid #bcd0e5;
+  background-color: transparent;
 }
 /* #endregion Header */
 
@@ -163,14 +189,14 @@ button {
   padding-bottom: 68px;
   background-color: #f5f5f5;
 }
-.container {
-}
+
 .why-choose-title {
   font-weight: 700;
   font-size: 34px;
   text-align: center;
   color: #22343d;
   text-transform: capitalize;
+  margin-bottom: 50px;
 }
 
 .why-choose-list {
@@ -183,10 +209,32 @@ button {
   flex-basis: calc((100% - 60px) / 3);
   border: 1px solid #dedede;
   border-radius: 10px;
-  padding: 40px 50px;
+  padding: 28px 32px;
   width: 350px;
-  padding-top: 32px;
-  padding-bottom: 34px;
+}
+
+.why-choose-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 19px;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 32px;
+  fill: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.why-choose-list-item:nth-child(1) .why-choose-box {
+  background-color: #02897a;
+}
+
+.why-choose-list-item:nth-child(2) .why-choose-box {
+  background-color: #4d8dff;
+}
+
+.why-choose-list-item:nth-child(3) .why-choose-box {
+  background-color: #f03e3d;
 }
 
 .why-choose-image {
@@ -196,16 +244,18 @@ button {
 .why-choose-subtitle {
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.375;
+  line-height: 1.37;
   letter-spacing: 0em;
   text-align: center;
   color: #22343d;
   margin-bottom: 16px;
+  max-width: 294px;
 }
+
 .why-choose-description {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.6875;
+  line-height: 1.69;
   letter-spacing: 0.01em;
   text-align: center;
   color: #22343d;
@@ -273,12 +323,23 @@ button {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
+  background-color: #02897a;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.how-work-button:hover,
+.how-work-button:focus {
+  color: #02897a;
+  background-color: transparent;
+  border: 1px solid #bcd0e5;
 }
 /* #endregion How Product Work? */
 
 /* #region received offers*/
 .offers-section {
   padding-bottom: 195px;
+  background: linear-gradient(180deg, #f5f5f5 0%, rgba(245, 245, 245, 0) 100%);
 }
 .container {
 }
@@ -335,7 +396,7 @@ button {
 
 /* #region Join */
 .join-section {
-  margin-bottom: 83px;
+  padding-bottom: 83px;
 }
 
 .green-container {
@@ -379,6 +440,16 @@ button {
   width: 150px;
   height: 50px;
   background-color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.join-btn:hover,
+.join-btn:focus {
+  color: #22343d;
+  background-color: #bcd0e5;
+  border: 1px solid #bcd0e5;
 }
 
 .join-image {
@@ -439,11 +510,35 @@ button {
 .footer-icon-item {
 }
 
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid #edfffc;
+  background-color: #edfffc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon {
+  stroke: #02897a;
+  fill: transparent;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: transparent;
+  border: 1px solid #bcd0e5;
+}
+
 .footer-text {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.5;
   color: #22343d;
+  margin-bottom: 30px;
 }
 .footer-list {
 }
@@ -454,8 +549,45 @@ button {
   font-size: 16px;
   line-height: 2.1875;
   color: #22343d;
+  transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-enter-text {
+
+.footer-item-link:hover,
+.footer-item-link:focus {
+  color: #02897a;
+}
+.form-label {
+  position: relative;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.form-input {
+  padding-left: 42px;
+  width: 325px;
+  height: 48px;
+  background-color: transparent;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.19;
+  color: #22343d;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+  border-color: #02897a;
+}
+
+.phone-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: #02897a;
+}
+
+.form-input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.75;
@@ -467,11 +599,22 @@ button {
   text-align: center;
   color: #fff;
   background-color: #02897a;
-  width: 131px;
+  min-width: 131px;
   height: 39px;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.footer-button:hover,
+.footer-button:focus {
+  color: #02897a;
+  background-color: transparent;
+  border: 1px solid #bcd0e5;
+}
+
 .footer-right-text {
   font-weight: 400;
   font-size: 16px;
