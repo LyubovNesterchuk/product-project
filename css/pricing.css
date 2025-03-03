@@ -518,9 +518,6 @@ button {
   padding-bottom: 150px;
 }
 
-.container {
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -550,11 +547,6 @@ button {
   margin-bottom: 50px;
 }
 
-.guestions-list {
-}
-
-.questions-list-item {
-}
 .questions-answer-container {
   display: flex;
   align-items: center;
@@ -563,14 +555,6 @@ button {
   margin: 0 auto 16px;
   max-width: 920px;
   border-bottom: 1px solid #e7e7e7;
-}
-.questions-icon {
-}
-
-.questions-subtitle {
-}
-
-.questions-description {
 }
 /* #endregion  questions*/
 
@@ -720,10 +704,7 @@ button {
   color: #22343d;
   margin-bottom: 30px;
 }
-.footer-list {
-}
-.footer-list-item {
-}
+
 .footer-item-link {
   font-weight: 400;
   font-size: 16px;
@@ -736,6 +717,7 @@ button {
 .footer-item-link:focus {
   color: #02897a;
 }
+
 .form-label {
   position: relative;
   margin-bottom: 25px;

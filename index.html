@@ -34,7 +34,7 @@
       </nav>
       <ul class="header-btn-list">
         <li class="header-btn-item"><button class="header-btn" type="button">Sign In</button></li>
-        <li class="header-btn-item"><button class="header-btn" type="button">Sign Up</button></li>
+        <li class="header-btn-item"><button class="header-btn" type="button" data-modal-open>Sign Up</button></li>
       </ul>
     </div>
   </header>
@@ -599,8 +599,8 @@
      
         <form class="footer-form">
         
-            <label class="form-label" for="user-tel">
-            <input class="form-input" id="user-tel" type="tel" name="user-tel" placeholder="Enter your phone number">
+            <label class="form-label" for="userstel">
+            <input class="form-input" id="userstel" type="tel" name="user-tel" placeholder="Enter your phone number">
             <svg class="phone-icon" width="16" height="24">
            <use href="./images/icons.svg#icon-mobile-screen"></use>
          </svg>
@@ -612,5 +612,72 @@
     </div>
     </footer>
     <!-- #endregion Footer -->
+
+ 
+    <!-- #region modal -->
+    <div class="backdrop" data-modal>
+      <div class="modal">
+
+        <button class="close-button" type="button" data-modal-close><svg class="icone-close" width="24" height="24">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg></button>
+
+<p class="modal-text">It is your <span class="green">best choice</span></p>
+
+<form class="modal-form">
+  <div  class="modal-form-field">
+    <label class="modal-form-label" for="user-name">Name</label>
+  <div class="modal-form-input-cont">
+    <input class="modal-form-input" id="user-name" type="text" name="user-name" placeholder="Lyubov" required> 
+    <svg class="modal-label-icon" width="24" height="24">
+    <use href="./images/icons.svg#icon-person"></use>
+  </svg>
+</div>
+</div>
+
+<div  class="modal-form-field">
+    <label class="modal-form-label" for="user-email">Email</label>
+  <div class="modal-form-input-cont">
+    <input class="modal-form-input" id="user-email" type="email" name="user-email" placeholder="test@gmail.com" required> 
+    <svg class="modal-label-icon" width="24" height="24">
+    <use href="./images/icons.svg#icon-email"></use>
+  </svg>
+</div>
+</div>
+
+<div  class="modal-form-field">
+    <label class="modal-form-label" for="user-tel">Phone number</label>
+  <div class="modal-form-input-cont">
+    <input class="modal-form-input" id="user-tel" type="tel" name="user-tel" placeholder="xxx-xxx-xx-xx" required> 
+    <svg class="modal-label-icon" width="24" height="24">
+    <use href="./images/icons.svg#icon-phone"></use>
+  </svg>
+</div>
+</div>
+
+<div class="modal-form-field comment"><label class="modal-form-label" for="user-comment">Comment</label>
+<textarea class="modal-form-input textarea" name="user-comment" id="user-comment" placeholder="Enter your comment"></textarea></div>
+
+<div class="modal-form-field-checkbox">
+  <input class="checkbox visually-hidden" type="checkbox" id="user-privacy">
+  <label class="label-checkbox" for="user-privacy">
+    <span class="custom-checkbox">
+      <svg class="modal-label-checkbox" width="14" height="14">
+  <use href="./images/icons.svg#icon-check"></use>
+</svg>
+</span>I accept the terms and conditions of the 
+<a class="privacy-link" href="#">privacy policy</a>
+</label>
+</div>
+
+<button class="modal-form-button" type="submit">Sign up</button>
+
+</form>
+      </div>
+    </div>
+<!-- #endregion modal -->
+  <script src="./js/modal.js"></script>
+  
+
   </body>
 </html>
