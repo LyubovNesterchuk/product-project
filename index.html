@@ -29,16 +29,42 @@
           <li class="header-list-item"><a class="header-item-link current" href="./index.html">Product</a></li>
           <li class="header-list-item"><a class="header-item-link" href="./pricing.html">Pricing</a></li>
           <li class="header-list-item"><a class="header-item-link" href="./customers.html">Customers</a></li>
-          <li class="header-list-item"><a class="header-item-link" href="#">Resources</a></li>
+          <li class="header-list-item"><a class="header-item-link" href="./resources.html">Resources</a></li>
         </ul>
       </nav>
       <ul class="header-btn-list">
         <li class="header-btn-item"><button class="header-btn" type="button">Sign In</button></li>
         <li class="header-btn-item"><button class="header-btn" type="button" data-modal-open>Sign Up</button></li>
       </ul>
+      <button 
+     class="burger-button" type="button" data-menu-open><svg class="menu-icon" width="28" height="31">
+       <use href="./images/icons.svg#icon-menu"></use>
+     </svg></button>
     </div>
   </header>
     <!-- #endregion Header -->
+
+    <!-- #region menu -->
+    <div class="backdrop-menu" data-menu>
+      <div class="menu">
+        <button class="menu-close-button" type="button" data-menu-close><svg class="close-icon" width="30" height="30">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg></button>
+<nav class="menu-nav">
+        <ul class="menu-nav-list">
+          <li class="menu-list-item"><a class="menu-item-link current" href="./index.html">Product</a></li>
+          <li class="menu-list-item"><a class="menu-item-link" href="./pricing.html">Pricing</a></li>
+          <li class="menu-list-item"><a class="menu-item-link" href="./customers.html">Customers</a></li>
+          <li class="menu-list-item"><a class="menu-item-link" href="./resources.html">Resources</a></li>
+        </ul>
+      </nav>
+      <ul class="menu-btn-list">
+        <li class="menu-btn-item"><button class="menu-btn" type="button">Sign In</button></li>
+        <li class="menu-btn-item"><button class="menu-btn" type="button" data-modal-open>Sign Up</button></li>
+      </ul>
+      </div>
+    </div>
+    <!-- #endregion menu -->
     <main>
       <!-- #region Hero section -->
       <section class="hero-section">
@@ -60,18 +86,25 @@
               </li>
             </ul>
           </div>
+          
+          <picture class="hero-image">
+            <source srcset="./images/product/hero-desktop.png 1x, ./images/product/hero-desktop@2x.png 2x" media=" (min-width: 1150px)">
+<source>
+<source srcset="./images/product/hero-mobile.png 1x, ./images/product/hero-mobile@2x.png 2x" media=" (max-width: 768px)">
+<source>
           <img class="hero-image"
-            src="./images/hero-img.svg"
+            src="./images/product/hero-mobile.png"
             alt="people"
             width="610"
             height="555"
           />
+        </picture>
         </div>
       </section>
       <!-- #endregion Hero section -->
 
       <!--  #region Product -->
-      <section class="product-section" id="product">
+      <section class="product-section hidden" id="product">
         <div class="container">
           <h2 class="product-title">
             Product <span class="lower">was</span> built specifically
@@ -153,7 +186,7 @@
       <!--  #endregion Product -->
 
       <!--#region Management-->
-      <section class="management-section">
+      <section class="management-section hidden">
         <div class="container management-container">
           <div class="management-description-container">
           <p class="management-title-text">Effortless Validation for</p>
@@ -190,7 +223,7 @@
       <!--#endregion Management-->
 
       <!-- #region Support-->
-      <section class="support-section">
+      <section class="support-section hidden">
         <div class="container support-container">
            <img
             src="./images/support-img.svg"
@@ -247,7 +280,7 @@
       <!-- #endregion Support-->
 
       <!-- #region  Collaborative-->
-      <section class="collaborative-section">
+      <section class="collaborative-section hidden">
         <div class="container collaborative-container">
           <div class="collaborative-description-container">
             <p class="collaborative-title-text">Optimisation for</p>
@@ -285,7 +318,7 @@
       <!-- #endregion Optimisation for Collaborative-->
 
       <!-- #region Process -->
-      <section class="process-section">
+      <section class="process-section hidden">
         <div class="container">
           <h2 class="process-title">Quick & easy process</h2>
           <p class="process-text">
@@ -349,7 +382,7 @@
       <!-- #endregion Process -->
 
       <!-- #region Strategies -->
-      <section class="strategies-section">
+      <section class="strategies-section hidden">
         <div class="container">
           <h2 class="strategies-title">Contents strategies</h2>
           <p class="strategies-text">
@@ -405,7 +438,7 @@
       <!-- #endregion Strategies -->
 
       <!-- #region Price -->
-      <section class="price-section">
+      <section class="price-section hidden">
         <div class="container">
           <h2 class="price-title">Price table</h2>
           <p class="price-text">We offer competitive price</p>
@@ -458,7 +491,7 @@
       <!-- #endregion Price Table -->
 
       <!-- #region Clients-->
-      <section class="clients-section">
+      <section class="clients-section hidden">
         <div class="container">
           <h2 class="clients-title">What clients say</h2>
           <p class="clients-text">
@@ -524,7 +557,7 @@
       <!-- #endregion Clients-->
 
       <!-- #region Join -->
-      <section class="join-section">
+      <section class="join-section hidden">
         <div class="container">
           <div class="green-container">
             <div class="join-title-btn-container">
@@ -547,7 +580,7 @@
     </main>
 
     <!-- #region Footer -->
-    <footer class="footer-section">
+    <footer class="footer-section hidden">
       <div class="container">
         <div class="footer-container">
         <div class="logo-social-link">
@@ -615,7 +648,7 @@
 
  
     <!-- #region modal -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop hidden" data-modal>
       <div class="modal">
 
         <button class="close-button" type="button" data-modal-close><svg class="icone-close" width="24" height="24">
@@ -677,6 +710,7 @@
     </div>
 <!-- #endregion modal -->
   <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
   
 
   </body>
