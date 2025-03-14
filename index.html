@@ -89,22 +89,19 @@
           
           <picture class="hero-image">
             <source srcset="./images/product/hero-desktop.png 1x, ./images/product/hero-desktop@2x.png 2x" media=" (min-width: 1150px)">
-<source>
 <source srcset="./images/product/hero-mobile.png 1x, ./images/product/hero-mobile@2x.png 2x" media=" (max-width: 768px)">
-<source>
           <img class="hero-image"
             src="./images/product/hero-mobile.png"
             alt="people"
-            width="610"
-            height="555"
-          />
+            /><!-- width="610"  
+              height="555" -->
         </picture>
         </div>
       </section>
       <!-- #endregion Hero section -->
 
       <!--  #region Product -->
-      <section class="product-section hidden" id="product">
+      <section class="product-section" id="product">
         <div class="container">
           <h2 class="product-title">
             Product <span class="lower">was</span> built specifically
@@ -186,7 +183,7 @@
       <!--  #endregion Product -->
 
       <!--#region Management-->
-      <section class="management-section hidden">
+      <section class="management-section">
         <div class="container management-container">
           <div class="management-description-container">
           <p class="management-title-text">Effortless Validation for</p>
@@ -212,25 +209,34 @@
             </li>
           </ul>
           </div>
-          <img
-            src="./images/management-img.svg"
+          <picture class="support-image">
+            <source srcset="./images/product/management-desktop.png 1x, ./images/product/management-desktop@2x.png 2x" media="(min-width: 1150px)">
+<source srcset="./images/product/management-mobile.png 1x, ./images/product/management-mobile@2x.png 2x" media="(max-width: 768px)">
+           <img
+            src="./images/product/management-mobile.png"
             alt="sheets"
-            width="540"
-            height="500"
-          />
-        </div>
-      </section>
+           /></picture>
+        </div>  
+         </section>
       <!--#endregion Management-->
 
       <!-- #region Support-->
-      <section class="support-section hidden">
+      <section class="support-section">
         <div class="container support-container">
-           <img
+           <!-- <img
             src="./images/support-img.svg"
             alt="laptop"
             width="540"
             height="500"
-          />
+          /> -->
+          <picture class="support-image">
+            <source srcset="./images/product/support-desktop.png 1x, ./images/product/support-desktop@2x.png 2x" media=" (min-width: 1150px)">
+<source srcset="./images/product/support-mobile.png 1x, ./images/product/support-mobile@2x.png 2x" media=" (max-width: 768px)">
+          <img class="hero-image"
+            src="./images/product/support-mobile.png"
+            alt="laptop"
+            /> 
+          </picture>
           <div class="support-description-container">
             <p class="support-section-title-text">Easier decision making for</p>
           <h2 class="support-title">Customer support</h2>
@@ -274,13 +280,13 @@
                 </p>
               </li>
             </ul>
-                    </div>
+          </div>
           </div>
       </section>
       <!-- #endregion Support-->
 
       <!-- #region  Collaborative-->
-      <section class="collaborative-section hidden">
+      <section class="collaborative-section">
         <div class="container collaborative-container">
           <div class="collaborative-description-container">
             <p class="collaborative-title-text">Optimisation for</p>
@@ -307,18 +313,25 @@
               </li>
             </ul>
           </div>
-          <img
+          <!-- <img
             src="./images/collaboration-img.svg"
             alt="folders"
             width="540"
             height="500"
-          />
+          /> -->
+          <picture class="collaborative-image">
+            <source srcset="./images/product/collaboration-desktop.png 1x, ./images/product/collaboration-desktop@2x.png 2x" media="(min-width: 1150px)">
+<source srcset="./images/product/collaboration-mobile.png 1x, ./images/product/collaboration-mobile@2x.png 2x" media="(max-width: 768px)">
+           <img
+            src="./images/product/collaboration-mobile.png"
+            alt="folders"
+           /></picture>
         </div>
       </section>
-      <!-- #endregion Optimisation for Collaborative-->
+      <!-- #endregion Collaborative-->
 
       <!-- #region Process -->
-      <section class="process-section hidden">
+      <section class="process-section">
         <div class="container">
           <h2 class="process-title">Quick & easy process</h2>
           <p class="process-text">
@@ -329,11 +342,10 @@
             <li class="process-list-item">
               <div class="process-desc-container">
                 <img
-                  src="./images/avatar/avatar.png"
-                  alt="avatar1"
-                  width="98"
-                  height="98"
-                />
+                   src="./images/product/foto-face/woman.png"
+                srcset="./images/product/foto-face/woman.png 1x, ./images/product/foto-face/woman@2x.png 2x"
+                  alt="woman"
+                 />
                 <div class="process-item-text-wrapper">
                   <p class="process-item-text">I can take care of your pitch</p>
                 </div>
@@ -344,33 +356,30 @@
                 <div class="process-item-text-wrapper">
                  <p class="process-item-text">I can take care of your pitch</p></div>
                 <img
-                  src="./images/avatar/avatar-g.png"
-                  alt="avatar"
-                  width="98"
-                  height="98"
-                />
+                  src="./images/product/foto-face/granny.png"
+                srcset="./images/product/foto-face/granny.png 1x, ./images/product/foto-face/granny@2x.png 2x"
+                  alt="granny"
+                  />
               </div>
             </li>
             <li class="process-list-item">
               <div class="process-desc-container">
                 <div class="process-item-text-wrapper">
                <p class="process-item-text">I can prototype your app</p></div>
-               <img
-                  src="./images/avatar/avatar-b.png"
-                  alt="avatar2"
-                  width="98"
-                  height="98"
-                />
+                <img
+                  src="./images/product/foto-face/boy.png"
+                srcset="./images/product/foto-face/boy.png 1x, ./images/product/foto-face/boy@2x.png 2x"
+                  alt="boy"
+                  />
                   </div>
             </li>
             <li class="process-list-item">
               <div class="process-desc-container">
-                <img
-                  src="./images/avatar/avatar-m.png"
-                  alt="avatar3"
-                  width="98"
-                  height="98"
-                />
+              <img
+                  src="./images/product/foto-face/manred.png"
+                srcset="./images/product/foto-face/manred.png 1x, ./images/product/foto-face/manred@2x.png 2x"
+                  alt="manred"
+                  />
                 <div class="process-item-text-wrapper">
                 <p class="process-item-text">I can help marketing strategy</p></div>
               </div>
@@ -382,7 +391,7 @@
       <!-- #endregion Process -->
 
       <!-- #region Strategies -->
-      <section class="strategies-section hidden">
+      <section class="strategies-section">
         <div class="container">
           <h2 class="strategies-title">Contents strategies</h2>
           <p class="strategies-text">
@@ -392,11 +401,12 @@
           <ul class="strategies-list">
             <li class="strategies-list-item">
               <img class="strategies-images"
-                src="./images/photo/image.png"
+                src="./images/product/foto-work/image1.jpg"
+                srcset="./images/product/foto-work/image1.jpg 1x, ./images/product/foto-work/image1@2x.jpg 2x"
                 alt="computer"
-                width="350"
-                height="185"
-              />
+                  />
+                  <!-- width="350"
+                height="185" -->
               <p class="strategies-item-text">
                 By <span class="dark">Wahid Ari</span> | 03 march 2019
               </p>
@@ -406,11 +416,10 @@
             </li>
             <li class="strategies-list-item">
               <img class="strategies-images"
-                src="./images/photo/image-1.png"
+                src="./images/product/foto-work/image2.jpg"
+                srcset="./images/product/foto-work/image2.jpg 1x, ./images/product/foto-work/image2@2x.jpg 2x"
                 alt="people"
-                width="350"
-                height="185"
-              />
+               />
               <p class="strategies-item-text">
                 By <span class="dark">Wahid Ari</span> | 03 march 2019
               </p>
@@ -420,11 +429,10 @@
             </li>
             <li class="strategies-list-item">
               <img class="strategies-images"
-                src="./images/photo/image-2.png"
+               src="./images/product/foto-work/image3.jpg"
+                srcset="./images/product/foto-work/image3.jpg 1x, ./images/product/foto-work/image3@2x.jpg 2x"
                 alt="sky"
-                width="350"
-                height="185"
-              />
+                 />
               <p class="strategies-item-text">
                 By <span class="dark">Wahid Ari</span> | 03 march 2019
               </p>
@@ -438,7 +446,7 @@
       <!-- #endregion Strategies -->
 
       <!-- #region Price -->
-      <section class="price-section hidden">
+      <section class="price-section">
         <div class="container">
           <h2 class="price-title">Price table</h2>
           <p class="price-text">We offer competitive price</p>
@@ -491,7 +499,7 @@
       <!-- #endregion Price Table -->
 
       <!-- #region Clients-->
-      <section class="clients-section hidden">
+      <section class="clients-section">
         <div class="container">
           <h2 class="clients-title">What clients say</h2>
           <p class="clients-text">
@@ -557,7 +565,7 @@
       <!-- #endregion Clients-->
 
       <!-- #region Join -->
-      <section class="join-section hidden">
+      <section class="join-section">
         <div class="container">
           <div class="green-container">
             <div class="join-title-btn-container">
